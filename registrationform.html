@@ -1,0 +1,132 @@
+<html>
+    <head>
+        <title>Registration form</title>
+        <style>
+            <style>
+                @media screen and (min-width:320px )  {
+
+body {
+     background-color: antiquewhite;
+}
+}
+/*  Tablet,ipad      */    
+
+@media Screen and (min-width:768px) and (max-width:1024px){
+body {
+     background-color: rgb(125, 216, 223);
+}
+}
+
+/* Desktops and Laptops asfsdf     */    
+
+@media Screen and (min-width:1224px) {
+body {
+     background-color: antiquewhite;
+}
+}
+
+/* Large Screens---------  */
+@media Screen and (min-width:1824px) {
+body {
+     background-color: rgb(241, 243, 147);
+}
+}
+            body {
+          margin: 0;
+         font-family: Arial;
+         font-size: 17px;
+         background-color: antiquewhite;
+        }
+
+        #myVideo {
+         position: fixed;
+         right: 0;
+         bottom: 0;
+         min-width: 100%; 
+         min-height: 90%;
+        }
+
+         .content {
+          position: relative;
+         bottom: 0;
+        color: #f1f1f1;
+        width: 100%;
+        padding: 50px;
+         }
+         body{
+            
+            background-image: url(n.jpg);
+            background-repeat:no repeat;
+            background-size: cover;
+        }
+            
+            
+        </style>
+         <script>
+            function validateform(){
+                var fname = document.myform.fname.value;
+                var lname = document.myform.lname.value;
+                var password = document.myform.password.value;
+                var confirmpassword = document.myform.confirmpassword.value;
+                if(fname==null || fname=="" || lname==null || lname == "") {
+                    alert("name can't be blank");
+                    return false;
+                }
+                else if(password != confirmpassword) {
+                    alert("passwords donot match");
+                    return false;
+                }
+                return true;
+            }
+        </script>
+    </head>
+    <body>
+        <nav>
+            <font size='5'>
+            <a style="border-radius :5px;background-color: rgb(154, 236, 158); padding:5px;border-color: rgb(224, 36, 184);"href="home.html">Home</a> |
+            <a style="border-radius :5px;background-color: rgb(233, 235, 137); padding:5px;border-color: rgb(30, 143, 209);"href="registrationform.html">Registration</a> |
+            <a style="border-radius :5px;background-color: rgb(238, 143, 238); padding:5px;border-color: rgb(57, 30, 209);"href="login.html">Login</a> |
+            <text-align="right"><a style="border-radius :5px;background-color: rgb(233, 136, 136); padding:5px;border-color: rgb(209, 30, 170);"href="contactus.html">Contact us</a></text-align>
+            <a style="border-radius :5px;background-color: rgb(204, 133, 52); padding:5px;border-color: rgb(88, 59, 219);"href="aboutus.html">About us</a>
+        </font>
+        </nav>
+        <center><video autoplay muted loop id ="myvideo">
+            <source src="C:\Users\LabUser\Desktop\UI Development\project 5\peacock.jpg.mp4" type="video/mp4"></video></center>
+        <form name="myform" action="login.html" onsubmit="return validateform(this)">
+           <center> <div class="content">
+        <center><h1>Registration page</h1>
+        First name:<input type="text" id="fname" name="fname" placeholder="Enter Your First name" autofocus><br>
+        Last name:<input type="text" id="lname" name="lname" placeholder="Enter Your Last name"><br>
+        password:<input type="password" id="password" name="password" placeholder="Enter password"><br>
+        confirm password:<input type="text" id="confirmpassword" name="confirmpassword" placeholder="Confirm  Your password"><br>
+        Roll no:<input type="text" name="fanme" placeholder="Enter Your Rollno"><br>
+        Date of Birth:<input type="date of birth" name="bday"><br>
+        <b>Gender</b><br><input type="radio" name="gen">Male<br>
+        <input type="radio" name="gen">female<br>
+        Age:
+        <input type="number" name="num" min="12" max="40" step="1">
+        <h3>Qualification</h3>
+        <input type="checkbox" name="qua">SSC<br>
+        <input type="checkbox" name="qua">INTERMEDIATE<br>
+        <input type="checkbox" name="qua">BTECH<br>
+        <input type="checkbox" name="qua">MTECH<br>
+        <h3>Branch</h3>
+        <select NAME="bname">
+            <option value="AIDS">AIDS</option>
+            <option value="AIML">AIML</option>
+            <option value="CSE">CSE</option>
+            <option value="ECE">ECE</option> 
+        </select><br>
+        Mobile no:
+        <input type="tel" name="num" id="p1" pattern="[0-9]{10}"placeholder="Enter Your Mobile no"><br>
+        College name:
+        <input type="text" name="cname"placeholder="Enter Your College name"><br>
+        Email:<input type="email" name="mail" id="off"placeholder="Enter Your Email"><br>
+        Address:<input type="text" name="adde" placeholder="Enter Your Address"><br>
+        Registration fee:
+        <a href="https://www.phonepe.com">link</a><br>
+        <input type="submit" value="submit">
+        </center></div></center>
+        </form>
+    </body>
+</html>

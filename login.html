@@ -1,0 +1,54 @@
+<html>
+<head>
+    <script>
+        // User Validations
+function loginValidation() {
+            // Ramesh
+  var uname = document.myform.username.value;
+             //Ramesh@123
+  var password = document.myform.password.value;
+            if(uname==null || uname=="") {
+              alert("Name cant be blank")
+              return false;  
+           } else if (password.length<6){
+              alert("Password Must be 6 letters")
+              return false;
+           }  
+           return true                 
+        }           
+     </script>   
+<title>Login page</title>
+<style>
+        body{
+            
+            background-repeat: no-repeat;
+            background-position: middle;
+            background-size: cover;
+            padding-top: 250px;
+        }
+        th{
+            padding-left: 20px;
+        }
+        
+</style>
+</head>
+<body background="lp.jpg">
+    <center><table border="5"></center>
+    <header>
+        <nav>
+            <font size='5'>
+            <a style="border-radius :5px;background-color: cadetblue; padding:5px;border-color: red;"href="home.html">Home</a> |
+            <a style="border-radius :5px;background-color: rgb(95, 160, 95); padding:5px;border-color: rgb(132, 207, 151);" href="registrationform.html">Registration</a> |
+            <a style="border-radius :5px;background-color: rgb(95, 110, 160); padding:5px;border-color: rgb(197, 218, 105);"href="login.html">Login</a> |
+            <text-align="right"><a style="border-radius :5px;background-color: rgb(160, 95, 144); padding:5px;border-color: rgb(255, 187, 0);" href="contactus.html">Contact us</a></text-align>
+            <a style="border-radius :5px;background-color: rgb(159, 243, 177); padding:5px;border-color: rgb(153, 231, 146);"href="aboutus.html">About us</a>
+        </font>
+        </nav>
+    </header>
+    <center><form name="myform" action="loginsuccess.html" onsubmit="return loginValidation(this)"><br><br><div class="abc">
+<th><center><h1>Username:<input type="text" name="username"><br></h1>
+<h1>password:<input type="password" name="password"><br></h1>
+<h5><input type="submit" value="submit"></h5></center></div></center></th>
+    </form>
+</body>
+</html>
